@@ -1,0 +1,9 @@
+# SimpleLogin
+記錄一下最簡單的Session與Cookies用法
+
+簡易的Session與Cookies用法請參考兩個檔案
+分別是Startup.cs與LoginController.cs
+這兩個檔案裡有駐解想使用Session與Cookies需要的方法
+
+另外還有將使用Sqlite的方式也加進去，使用資料庫的部份差別在需要使用LINQ將資料庫的內容取出做比對
+這部份會另外寫一個專案來講解
