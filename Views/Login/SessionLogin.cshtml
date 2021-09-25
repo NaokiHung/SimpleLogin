@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SessionLogin</title>
+</head>
+<body>
+
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+        @Html.Label("帳號: ")
+        @Html.TextBox("UserName")
+        <br />
+        <br />
+        @Html.Label("密碼: ")
+        @Html.TextBox("UserPassword","", new { Type="password"})
+        <br />
+        <br />
+        <input type="submit" value="送出" class="btn btn-primary" />
+    }
+
+</body>
+</html>

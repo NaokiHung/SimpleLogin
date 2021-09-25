@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexOK</title>
+</head>
+<body style="background-color:greenyellow">
+
+    <h1>Login confirm</h1>
+    <br />
+    @{
+        if (TempData["SessionLogin"] != null)
+        {
+            <h2 style="color:sandybrown">目前是使用Session登入. @Html.TempData["SessionLogin"] </h2>
+        }
+
+        if (TempData["CookieLogin"] != null)
+        {
+            <h2 style="color:blueviolet">目前是使用Cookie登入. @Html.TempData["CookieLogin"] </h2>
+        }
+
+        if ((TempData["SessionLogin"] == null) &&(TempData["CookieLogin"] == null))
+			{
+                <h2 style="color:red">現在沒有Session也沒有Cookie</h2>
+			}
+    }
+
+    @Html.ActionLink("登出(Logout)","Logout")
+</body>
+</html>

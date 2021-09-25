@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @Html.ActionLink("登入(使用Session)", "SessionLogin")
+    <br />
+
+    @Html.ActionLink("登入(使用Cookie)", "CookieLogin")
+    <br />
+
+    @Html.ActionLink("登入(使用Sqlite and Session)", "SqliteSessionLogin")
+    <br />
+
+    @Html.ActionLink("登入(使用Sqlite and Cookie)", "SqliteCookieLogin")
+    <br />
+
+    @Html.ActionLink("測試功能(登入成功頁面)", "IndexOK")
+    <br />
+
+</body>
+</html>
